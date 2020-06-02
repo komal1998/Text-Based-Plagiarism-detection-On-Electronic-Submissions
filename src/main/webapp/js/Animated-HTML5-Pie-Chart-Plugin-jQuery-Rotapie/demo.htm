@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Rotapie Plugin Basic Demo</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+        body{text-align:center; background-color:#333; color:#fff;} 
+        h1 { margin:150px auto;}
+    </style>
+</head>
+<body> 
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/chart-graph/Animated-HTML5-Pie-Chart-Plugin-jQuery-Rotapie.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <h1>jQuery Rotapie Plugin Basic Demo</h1> 
+    <div id="pie"></div> 
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <script src="jquery.rotapie.js"></script>
+    <script>
+        $(function(){
+            $('#pie').rotapie({
+                slices: [
+                    { color: '#006673', percentage: 10 }, // If color not set, slice will be transparant.
+                    { color: '#0294a8', percentage: 30 }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
+                    { color: '#77ccd1', percentage: 60 }
+                ],
+                sliceIndex: 0, // Start index selected slice.
+                deltaAngle: 0.2, // The rotation angle in radians between frames, smaller number equals slower animation.
+                minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                innerColor: '#fff', // Background color inner circle. 
+                minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                fontFamily: 'Times New Roman', // FontFamily percentage display.
+                fontWeight: 'bold', // FontWeight percentage display.
+                decimalPoint: '.', // Can be set to comma or other symbol.
+                clickable: true // If set to true a user can select a different slice by clicking on it. 
+                /*
+                beforeAnimate: function (nextIndex, settings) {
+                    var canvas = this;
+                    return false; // Cancel rotation
+                },
+                afterAnimate: function(settings){
+                    var canvas = this;
+                    var index = settings.sliceIndex; // Retrieve current index.
+                }
+                */
+            });
+        });
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

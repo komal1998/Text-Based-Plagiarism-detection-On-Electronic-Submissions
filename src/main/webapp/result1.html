@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GL</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/local.css" />
+
+
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>        
+
+</head>
+
+<body>
+
+
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo-text.png"></a>
+
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse shadows">
+
+                  <ul class="nav navbar-nav side-nav shadows">
+
+                    <li><a href="index.html">  <img src="assets/images/icons/incustomer.png" id="input_img"> &nbsp;Customer</a></li>
+
+                    <li><a href="#"><img src="assets/images/icons/edit_orders.png" id="input_img"> &nbsp; Edit Orders</a></li>
+
+                    <li class="dropdown"><a  href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/images/icons/process.png" id="input_img"> &nbsp; Process 
+
+                      <b class="caret"></b></a>
+
+                      <ul class="dropdown-menu">
+
+<li><a href="index.html">  &nbsp;Customer</a></li>
+
+                        </ul>
+
+
+
+                    </li>
+
+                    <li><a href="#"><img src="assets/images/icons/pickup.png" id="input_img"> &nbsp;Pickup</a></li>
+
+                    <li><a href="#"><img src="assets/images/icons/delivery.png" id="input_img"> &nbsp;Delivery</a></li>
+
+                    <li><a href="#"><img src="assets/images/icons/log_issues.png" id="input_img"> &nbsp;Log Issues</a></li>
+
+                    <li class="selected"><a href="forms.html"><img src="assets/images/icons/reports.png" id="input_img"> &nbsp; Reports</a></li>
+
+                    <li><a href="#"><img src="assets/images/icons/accounts.png" id="input_img"> &nbsp; Accounts</a></li>
+
+                    <li><a href="#"><img src="assets/images/icons/customer_package.png" id="input_img"> &nbsp;</i> Customer package</a></li>
+
+                                
+
+                </ul>
+
+                 <ul class="nav navbar-nav navbar-left navbar-user" style="margin-left:10px;">
+
+                 <li>
+
+                        <form class="navbar-search" style="padding-top: 0px!important;margin:20px 0px 0px 20px;">
+
+                            <div id='button-holder'>
+
+    <img src='assets/images/icons/search.png'/>
+
+</div><input type="text" placeholder="Search" class="form-control" id='search-text-input'>
+
+                        </form>
+
+
+
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-left navbar-user" style="margin-left:0px;">
+
+                 <li>
+
+                        <form class="navbar-search" style="padding-top: 0px!important;margin:20px 0px 0px 20px;">
+
+                            <div id='button-holder' style="border:none;">
+
+    <img src='assets/images/icons/add_customer.png' style="width:25px"/>
+
+    <div style="font-size: 10px;font-weight: 800;margin-left: -25px;width:100px;color:#087DC2;">Add Customer</div>
+
+</div>
+
+                        </form>
+
+
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right navbar-user">
+
+                  
+
+
+
+                     <li class="dropdown messages-dropdown">
+
+                        <button type="submit" class="btn btn-md btn-primary" style="margin:20px;width:120px;">Logout</button> 
+
+                        
+
+                    </li>
+
+                    
+
+                       
+
+                        
+
+                    
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+
+
+       <div id="page-wrapper" class="inner-wrapper">
+
+
+
+            <div class="row">
+               <div class="col-lg-12"><h3 class="panel-title"><b>New Customer (F3)</b></h3></div>
+
+                <div class="col-lg-12">
+               
+                    <div class="panel panel-primary shadows">
+
+                       
+
+                        <div class="panel-body">
+
+                            
+
+                          <form role="form">
+
+                           <ul  class="form-row">
+                              <li>
+                                 <div class="form-group col-lg-8">
+
+                                    <label>Customer Name*</label>
+        
+                                    <input class="form-control">
+        
+                                  
+        
+                                </div>
+                              </li>
+                              <li>
+                                 <div class="form-group col-lg-8">
+
+                                    <label>Address*</label>
+        
+                                    <textarea class="form-control" rows="2"></textarea>
+        
+                                </div>
+                              </li>
+                              <li>
+                                 <div class="form-group col-lg-8">
+
+                                    <div class="row">
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Area Location*</label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                         <label>City* </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                         <label>Pincode </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                    </div>
+          
+                                     
+          
+                                  </div>
+                              </li>
+
+                              <li>
+                                 <div class="form-group col-lg-8">
+
+                                    <div class="row">
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Map Location</label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                         <label>Latitude </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                         <label>Longitude </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                    </div>
+          
+                                     
+          
+                                  </div>
+                              </li>
+
+                              <li class="form-box">
+
+                                <fieldset class="scheduler-border">
+                           <legend class="scheduler-border">Contact Information</legend>
+
+                           <div class="row">
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Mobile No*</label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                         <label>Enter OTP* </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-3">
+          
+                                        
+                                     <br>
+                                    <button class="btn btn-sm">Generate OTP</button><br>
+          
+                                      </div>
+          
+                                    </div>
+
+                                    <div class="row">
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Alternate Number</label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Email ID </label>
+          
+                                      <input class="form-control" placeholder="">
+          
+                                      </div>
+          
+                                      
+          
+                                    </div>
+   
+                        </fieldset>
+                      </li>
+
+                      <li>
+                       
+          
+                          <div class="col-lg-8" >
+                              <div class="col-lg-6" >
+                                <label>Customer Source</label>
+          
+                                  <input class="form-control" placeholder="">
+                                    </div>
+                                  <div class="col-lg-6" >
+                                  <label>GSTTIN No. </label>
+          
+                                  <input class="form-control" placeholder="">
+                                    </div>
+
+                                     <div class="col-lg-6" >
+                                <label>Preffered Communication</label>
+                                <br>
+
+                                <label class="checkbox-inline"><input type="checkbox" value="">Email</label>
+<label class="checkbox-inline"><input type="checkbox" value="">SMS</label>
+
+          
+                                  
+                                    </div>
+
+                                     <div class="col-lg-6" >
+                                <label>Preference</label>
+          
+                                  <br>
+
+                                <label class="checkbox-inline"><input type="checkbox" value="">Folding</label>
+<label class="checkbox-inline"><input type="checkbox" value="">Hanger</label>
+
+                                    </div>
+
+                                    <div class="col-lg-6" >
+                                <label>Customer Type</label>
+                                <br>
+
+                                <label class="checkbox-inline"><input type="radio" value="">Email</label>
+<label class="checkbox-inline"><input type="radio" value="">SMS</label>
+
+          
+                                  
+                                    </div>
+
+                                     <div class="col-lg-6" >
+                                <label>Profession</label>
+          
+                                  <br>
+
+                                <label class="checkbox-inline"><input type="radio" value="">Business</label>
+<label class="checkbox-inline"><input type="radio" value="">Service</label>
+
+                                    </div>
+          
+                                    </div>
+                                    <!-- fieldset-->
+                                  <div class="col-lg-4" >
+
+                                  <fieldset class="scheduler-border">
+                           <legend class="scheduler-border">Discount</legend>
+
+                           <div class="row">
+          
+                                      <div class="col-lg-8">
+          
+                <label class="checkbox-inline"><input type="checkbox" value="">Discount(%)</label>
+                                      </div>
+
+                                      <div class="col-lg-4">
+                                      <input class="form-control" placeholder="">
+                                      </div>
+
+
+
+          <br>
+                                      <div class="col-lg-8">
+          <label class="checkbox-inline"><input type="checkbox" value="">Base Discount(%)</label>
+                                      </div>
+
+                                       <div class="col-lg-4">
+                                      <input class="form-control" placeholder="">
+                                      </div>
+          
+                                 
+          
+                                    </div>
+
+                                    <div class="row">
+          
+                                      <div class="col-lg-12">
+          
+         <label class="checkbox-inline"><input type="checkbox" value="">Show Discount on Bill</label>
+          
+                                      </div>
+
+                                    </div>
+   
+                        </fieldset>
+                                      </div>
+                                   
+                        
+                      </li>
+
+                        <li>
+                                 <div class="form-group col-lg-8">
+
+                                    <div class="row">
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Remarks</label>
+          
+                                      <textarea rows="3" class="form-control"></textarea>
+          
+                                      </div>
+          
+                                      <div class="col-lg-6">
+          
+                                         <label>Comments </label>
+                                       <textarea class="form-control" rows="3"></textarea>
+                                     
+          
+                                      </div>
+          
+                                     
+          
+                                    </div>
+          
+                                     
+          
+                                  </div>
+
+                                   <div class="form-group col-lg-4">
+
+                                     <form role="form">
+
+                <ul class="form-row">
+                  <li>
+
+                    <label for="lastname" class="col-md-5">
+
+                      <span class="label-text">Birthday</span>
+
+                    </label>
+
+                  
+
+                    <div class="col-md-6"><div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                          <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                          </span>
+                                      </div></div>
+
+                  </li>
+                   <li>
+
+                    <label for="lastname" class="col-md-5">
+
+                      <span class="label-text">Annivarsary</span>
+
+                    </label>
+
+                  
+
+                    <div class="col-md-6"><div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                          <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                          </span>
+                                      </div></div>
+
+                  </li>
+
+
+                </ul>
+                                    
+                                  </div>
+                                  <li>
+                                  <button type="submit" class="btn btn-md btn-primary" style="margin:20px;width:120px;">Update</button>
+
+                                   <button type="submit" class="btn btn-md btn-primary" style="margin:20px;width:120px;">Reset</button>
+                              </li>
+                              </li>
+                              
+                           </ul>
+
+
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              <!--  <form>
+                                  <div class="form-group col-md-4">
+                                    <label for="remark">remark:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                  </div>
+
+                                   <div class="form-group col-md-4">
+                                    <label for="comment">comment:</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                  </div>
+
+                                  <div class="form-group col-md-4">        
+                                    <label>Birthday</label>
+                                      <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                          <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                          </span>
+                                      </div>
+                                    
+                                   
+                                      <script type="text/javascript">
+                                          $(function () {
+                                              $('#datetimepicker1').datetimepicker();
+                                          });
+                                      </script>
+
+
+
+                                    <br>
+                                    
+                                    <div class="form-group">
+                                      <label>Annivarsary</label>
+                                       <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                          <span class="input-group-addon">
+                                           <span class="glyphicon glyphicon-calendar"></span>
+                                          </span>
+                                     </div>
+                                    
+                                   </div>
+                                    
+                                  </div>
+
+                                  <button class="btn btn-sm btn-primary">Update</button>
+                                  <button class="btn btn-sm btn-primary">Refresh</button>
+                                </form>
+ -->
+                       
+
+
+
+                           
+
+
+
+                        
+
+                        
+
+                         
+
+
+
+
+
+
+
+
+
+                         
+
+                         
+
+                            </form>
+
+                         
+
+                    </div>
+
+                </div>
+
+            </div> <!-- col-lg-12 -->
+
+          
+
+                
+
+            </div>
+
+<!-- tab -->
+
+            
+
+        </div>
+
+    </div>    
+
+
+
+</body>
+
+</html>
+

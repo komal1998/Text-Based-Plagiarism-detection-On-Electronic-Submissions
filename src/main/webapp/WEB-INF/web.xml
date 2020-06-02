@@ -1,0 +1,21 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Plagarism</display-name>
+  <servlet>
+  	<servlet-name>PlagarismServlet</servlet-name>
+  	<display-name>PlagarismServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.plagarism.PlagarismServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PlagarismServlet</servlet-name>
+  	<url-pattern>/PlagarismServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+  
+  </welcome-file-list>
+</web-app>
